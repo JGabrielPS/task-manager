@@ -1,0 +1,26 @@
+@baseUrl = http://localhost:3000/api
+
+@version = /v1
+
+@taskRoute = /tasks
+
+###TASKS METHODS
+###GET ALL TASKS
+GET {{baseUrl}}{{version}}{{taskRoute}}
+
+###POST ONE TASK
+POST {{baseUrl}}{{version}}{{taskRoute}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "test"
+}
+
+###GET ONE TASK
+GET {{baseUrl}}{{version}}{{taskRoute}}/peter
+
+###UPDATE A TASKS
+PATCH  {{baseUrl}}{{version}}{{taskRoute}}/1
+
+###DELETE A TASK
+DELETE {{baseUrl}}{{version}}{{taskRoute}}/1
