@@ -7,9 +7,9 @@ import {
   deleteTask,
 } from "../controllers/tasks.js";
 
-const tasks = express.Router();
+const router = express.Router();
 
-tasks.route("/").get(getAllTasks).post(createTask);
-tasks.route("/:id").get(getTask).patch(updateTask).delete(deleteTask);
+router.route("/").get(getAllTasks).post(createTask);
+router.route("/:id").get(getTask).patch(updateTask).delete(deleteTask);
 
-export default tasks;
+export default router;
