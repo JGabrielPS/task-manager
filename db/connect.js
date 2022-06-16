@@ -1,10 +1,7 @@
 import mongoose from "mongoose";
-import "dotenv/config";
-
-const connectionString = process.env.MONGODB_CONNECTION;
 
 const connectDB = (url) => {
-  return mongoose.connect(connectionString, {
+  return mongoose.connect(url, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
