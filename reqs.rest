@@ -30,3 +30,6 @@ Content-Type: application/json
 
 ###DELETE A TASK
 DELETE {{baseUrl}}{{version}}{{taskRoute}}/62accee00947dc3690d2ff1f
+
+###TEST NOT FOUND RESOURCE
+GET {{baseUrl}}{{version}}{{taskRoute}}/hello
