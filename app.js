@@ -3,6 +3,7 @@ import "dotenv/config";
 import express from "express";
 import tasks from "./routes/tasks.js";
 import notFound from "./middleware/not-found.js";
+import errorHandler from "./middleware/error-handler.js";
 
 const app = express();
 
@@ -11,6 +12,7 @@ app.use(express.json());
 
 app.use("/api/v1/tasks", tasks);
 app.use(notFound);
+app.use(errorHandler);
 
 const port = process.env.PORT || 5000;
 
